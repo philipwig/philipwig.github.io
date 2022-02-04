@@ -2,6 +2,7 @@
 layout: post
 title: "BladeRF Setup Guide"
 date: 2022-02-04
+categories: sdr gnuradio bladerf
 ---
 
 # BladeRF Setup Guide
@@ -101,5 +102,3 @@ pybombs -p bladeRF run gqrx
 Written by: Philip Wig
 
 Last updated: 2/4/2022
-
-#sdr #gnuradio #bladerf
