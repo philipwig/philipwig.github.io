@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Electronic Ramblings
+title: Out of Transistors
 # email: philip-wig@att.net
 description: >- # this means to ignore newlines until "baseurl:"
   Just a small blog for me to write up some of the projects and thoughts
@@ -27,11 +27,20 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://philipwig.com" # the base hostname & protocol for your site, e.g. http://example.com
 # twitter_username: jekyllrb
 github_username:  philipwig
+author: By Philip Wig
 
 # Build settings
-theme: minima
+remote_theme: jekyll/minima
 plugins:
-  - jekyll-feed
+  - jekyll-remote-theme
+
+minima:
+  skin: dark
+
+collections:
+  tutorials:
+    output: true
+    permalink: /tutorials/:title/
 
 # Exclude from processing.
 # The following items will not be processed, by default.

@@ -1,0 +1,19 @@
+.site-header {
+  border-top: 0px;
+}
+.row {
+  display: flex;
+}
+.column {
+  flex: 50%;
+}
+::-webkit-scrollbar {
+  background-color: #202324;
+  color: #aba499;
+}
+::-webkit-scrollbar-corner {
+  background-color: #181a1b;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #454a4d;
+}

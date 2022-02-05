@@ -2,18 +2,15 @@
 layout: post
 title: "BladeRF Setup Guide"
 date: 2022-02-04
-categories: sdr gnuradio bladerf
 ---
 
-# BladeRF Setup Guide
-
-I recently got a bladeRF micro A5 to play around with and everything is going wonderful so far. I did run into a few problems trying to get it setup though.
+I recently got a bladeRF micro xA5 to play around with and everything is going wonderful so far. I did run into a few problems trying to get it setup though.
 
 I started by following the guide on getting started on the bladeRF github page and since I am on Ubuntu 20.04 I followed the Linux instructions.
 
 [Getting Started: Linux · Nuand/bladeRF Wiki](https://github.com/Nuand/bladeRF/wiki/Getting-Started%3A-Linux)
 
-I wanted to use PyBOMBS because I knew in the future I wanted to use some of the out of tree modules for GNU Radio, and PyBOMBS is essentially a package manager for that. I think I also tried the ppa method because of reasons I’ll outline, but I eventually I got the PyBOMBS version working. 
+I wanted to use PyBOMBS because I knew in the future I wanted to use some of the out of tree modules for GNU Radio, and PyBOMBS is essentially a package manager for that. I think I also tried the ppa method because of reasons I’ll outline, but I eventually I got the PyBOMBS version working.
 
 The process I followed to get it working was to get the necessary packages as described
 
@@ -97,8 +94,3 @@ Now that the bladeRF FPGA is programmed you can run gqrx and see the spectrum
 ```bash
 pybombs -p bladeRF run gqrx
 ```
-
-## Credits
-Written by: Philip Wig
-
-Last updated: 2/4/2022

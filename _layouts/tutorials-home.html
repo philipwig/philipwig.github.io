@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="posts">
+
+    <header class="posts-header">
+      <h1 class="posts-title">{{ page.title | escape }}</h1>
+    </header>
+  
+    {{ content }}
+  
+    {%- if site.tutorials.size > 0 -%}
+      <ul class="post-list">
+        {%- for tutorial in site.tutorials reversed -%}
+        <li>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="post-meta">{{ tutorial.date | date: date_format }}</span>
+          <h3>
+            <a class="post-link" href="{{ tutorial.url | relative_url }}">
+              {{ tutorial.title | escape }}
+            </a>
+          </h3>
+          {%- if site.show_excerpts -%}
+            {{ tutorial.excerpt }}
+          {%- endif -%}
+        </li>
+        {%- endfor -%}
+      </ul>
+  
+    {%- endif -%}
+  
+  </div>
+  
