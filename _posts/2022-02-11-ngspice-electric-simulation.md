@@ -22,7 +22,7 @@ After doing this, build your circuit. Make sure that you use spice sources for v
 
 You will also need to add some spice directives for the simulation.
 ```.tran 100p 24n``` runs a transient simulation for 24ns with 100ps timesteps.
-```.model PNNMOS level=14 version=4.7.0``` and ```.model P PMOS level=14 version=4.7.0``` use the builtin nmos and pmos models as specified in the Ngspice manual. These are using the BSIM4v7 mosfet model.
+```.model N NMOS level=14 version=4.7.0``` and ```.model P PMOS level=14 version=4.7.0``` use the builtin nmos and pmos models as specified in the Ngspice manual. These are using the BSIM4v7 mosfet model.
 
 ![Inverter Example](/assets/images/ngspice-electric/electric-inv-example.png)
 
