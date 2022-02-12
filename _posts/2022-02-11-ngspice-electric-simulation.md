@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Electric + Ngspice Simulation
+title: Basic Electric and Ngspice Simulation
 date: 2022-02-11
 ---
 
@@ -26,7 +26,7 @@ You will also need to add some spice directives for the simulation.
 
 ![Inverter Example](/assets/images/ngspice-electric/electric-inv-example.png)
 
-Now to run the simulation, go to **Tools -> Simulation (Spice) -> Write Spice Deck...** This will run Ngspice and generated a ```.raw``` file. 
+Now to run the simulation, go to **Tools -> Simulation (Spice) -> Write Spice Deck...** This will run Ngspice and generated a ```.raw``` file.
 
 To view the output of the simulation, any waveform viewer can be used. For just the basics, run ```Ngspice``` and then load the output data with ```load {YOUR_FILENAME}.raw```. Then you can do ```plot {NET_NAME} {ANOTHER_NET_NAME}``` to plot any of the nets in your design.
 
