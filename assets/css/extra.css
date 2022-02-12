@@ -22,3 +22,7 @@
 .post-content h1, .post-content h2, .post-content h3 {
   margin-top: 0px;
 }
+
+code {
+  white-space: pre;
+}
