@@ -1,7 +1,7 @@
 ---
 layout: tutorial
 title: Installing Electric
-date: 2022-02-05
+date: 2022-02-11
 ---
 
 Electric is written in Java and distributed as a .jar file which you should be able to run from anywhere on your computer. The following instructions will show one install method, feel free to modify for your use case. 
@@ -28,9 +28,7 @@ Place all of the downloaded files into the Electric folder you created earlier. 
 
 Now create a new .bat file in the same directory named ```electric.bat``` and paste the following command.
 
-
-
-``` bat
+```
 @echo OFF
 
 set JAVA3D_INSTALL_PATH=C:\Program Files\Java\Java3D\1.5.1
@@ -71,13 +69,13 @@ To test if Java3D is working, load the demo by going to **Help -> 3D Showcase ->
 
 If you get an error saying Java was not found, check if Java is in your path by opening a command prompt and running the following 
 
-```bat
+```
 java -version
 ```
 
 If Java is in your path, this should print out the installed version of Java. If it prints an error,  Java is not on your path. To fix, replace ```java``` in the above command with the **complete** path to the Java install on your computer. As an example, for my computer with the Java.exe path ```C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe```, the command would then become
 
-```bat
+```
 "C:\Program Files (x86)\Common Files\Oracle\Java\javapath\java.exe" -showversion -classpath "%JAVA3D_INSTALL_PATH%\lib\ext\j3dcore.jar;%JAVA3D_INSTALL_PATH%\lib\ext\j3dutils.jar;%JAVA3D_INSTALL_PATH%\lib\ext\vecmath.jar;jython-standalone-2.7.2.jar;electricSFS-9.07.jar;electricBinary-9.07.jar" com.sun.electric.Launcher -sdi
 ```
 
@@ -87,13 +85,13 @@ If Java is in your path, this should print out the installed version of Java. If
 
 Start by installing Java using the following command
 
-```bash
+```
 sudo apt install default-jre
 ```
 
 You should now be able to run ```java --version``` and see your current Java version. For example, my output is shown below for reference.
 
-```shell
+```
 philip@PHILIP-DESKTOP:~$ java --version
 openjdk 11.0.13 2021-10-19
 OpenJDK Runtime Environment (build 11.0.13+8-Ubuntu-0ubuntu1.20.04)
@@ -112,12 +110,12 @@ Now download the Java3D installer for Linux from [here](https://www.oracle.com/j
 
 ```chmod +x``` the Java3D installer and run. It should install directly in the Electric folder. Now create a file named ```electric.sh``` and place the following in it.
 
-```bash
-#!/bin/bash
+```
+BASEDIR=$(dirname "$0")
 
-export LD_LIBRARY_PATH=lib/amd64
+export LD_LIBRARY_PATH=$BASEDIR/lib/amd64
 
-java -classpath electricBinary-9.07.jar:electricSFS-9.07.jar:jython-standalone-2.7.2.jar:lib/ext/j3dcore.jar:lib/ext/j3dutils.jar:lib/ext/vecmath.jar com.sun.electric.Launcher
+java -classpath $BASEDIR/electricBinary-9.07.jar:$BASEDIR/electricSFS-9.07.jar:$BASEDIR/jython-standalone-2.7.2.jar:$BASEDIR/lib/ext/j3dcore.jar:$BASEDIR/lib/ext/j3dutils.jar:$BASEDIR/lib/ext/vecmath.jar com.sun.electric.Launcher
 ```
 
 Now ```chmod +x``` the electric.sh file and run it. Electric should open. To test if the plugins were loaded correctly, go to **Help -> About Electric -> Plugins**. You should see something like below
@@ -132,6 +130,14 @@ Jython: installed
 ```
 
 To test if Java3D is working, load the demo by going to **Help -> 3D Showcase -> Load Library**. Once the library is loaded go to **Help -> 3D Showcase -> 3D View of Cage Cell**. Now you should be able to see the 3D demo.
+
+For convinence, you can add electric to your ```.bashrc``` so that you can launch it from anywhere. Add the following line to the end of your ```.bashrc```. Change the path if you installed Electric somewhere else.
+
+```
+alias electric="$HOME/electric/electric.sh"
+```
+
+Now you can just type ```electric``` into the terminal and it will launch using the current directory.
 
 <!---
 # Installing LTspice
