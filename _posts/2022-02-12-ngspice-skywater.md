@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Basic Ngspice Simulation with SkyWater PDK
-date: 2022-02-12
 ---
 
 I wanted to be able to use the simulation models from the SkyWater PDK to simulate my designs. This post details the process of getting a simple inverter simulation working as well as a surprise at the end.

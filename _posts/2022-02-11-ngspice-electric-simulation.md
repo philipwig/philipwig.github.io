@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Basic Electric and Ngspice Simulation
-date: 2022-02-11
 ---
 
 I want to be able to create schematics in Electric and be able to export those to spice files which can then be simulated. On Windows I can use Electric and LTspice to do this, but how can it be done on Linux where LTspice is hard to come by?

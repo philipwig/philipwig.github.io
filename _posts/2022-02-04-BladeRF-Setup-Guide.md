@@ -1,7 +1,6 @@
 ---
 layout: post
 title: "BladeRF Setup Guide"
-date: 2022-02-04
 ---
 
 I recently got a bladeRF micro xA5 to play around with and everything is going wonderful so far. I did run into a few problems trying to get it setup though.
