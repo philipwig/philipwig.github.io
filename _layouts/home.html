@@ -27,6 +27,9 @@ layout: default
           </li>
           {%- endfor -%}
         </ul>
+
+        <h3 class="post-list"><a href="/posts">{{ page.list_title | default: "More Posts" }}</a></h3>
+
       {%- endif -%}
     </div>
 
@@ -51,6 +54,9 @@ layout: default
           </li>
           {%- endfor -%}
         </ul>
+
+        <h3 class="post-list"><a href="/tutorials">{{ page.list_title | default: "More Tutorials" }}</a></h3>
+
       {%- endif -%}
 
     </div>
