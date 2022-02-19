@@ -12,7 +12,7 @@ layout: default
         <!-- <h2 class="post-list-heading"><a href="/posts">{{ page.list_title | default: "Posts" }}</href></h2> -->
         <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
         <ul class="post-list">
-          {%- for post in site.posts-%}
+          {%- for post in site.posts limit: 5 -%}
           <li>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span class="post-meta">{{ post.date | date: date_format }}</span>
@@ -39,7 +39,7 @@ layout: default
         <!-- <h2 class="post-list-heading"><a href="/tutorials">{{ page.list_title | default: "Tutorials" }}</href></h2> -->
         <h2 class="post-list-heading">{{ page.list_title | default: "Tutorials" }}</h2>
         <ul class="post-list">
-          {%- for tutorial in site.tutorials reversed -%}
+          {%- for tutorial in site.tutorials reversed limit: 5 -%}
           <li>
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span class="post-meta">{{ tutorial.date | date: date_format }}</span>
