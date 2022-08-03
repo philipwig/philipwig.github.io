@@ -89,7 +89,7 @@ This makes it rather easy to add more or less variations of the width.
 
 The notebook should be run from the same folder that the Ngspice simulation is run in so that it can find the ```data/``` folder containing the raw output from the simulations.
 
-```
+```python
 import ltspice
 from matplotlib import pyplot as plt
 import numpy as np
